@@ -169,7 +169,7 @@ generateBtn.addEventListener("click", () => {
         funcArr.push(generateSymbol);
     }
 
-    for (let i = 0; i < passwordLength; i++) {
+    for (let i = 0; i < funcArr; i++) {
         password += funcArr[i]();
         
     }
