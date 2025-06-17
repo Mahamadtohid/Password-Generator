@@ -211,6 +211,31 @@ h1{
     outline: 2px solid black;
 }
 
+.copyBtn{
+    background-color: transparent;
+    position: relative;
+}
+
+.tooltip{
+    position: absolute;
+    background-color: darkviolet;
+    color: yellow;
+    font-size: 1.25rem;
+    top:-35px;
+    left:-25px;
+    padding : 5px 10px;
+    border-radius: 1rem;
+    opacity:0;
+    transform:scale(0);
+    transform-origin:bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /*----------------------------------------------------------------------------------------------------*/
 

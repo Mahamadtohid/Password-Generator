@@ -25,6 +25,11 @@ function handleSlider(){
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
 
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+
+    inputSlider.style.backgroundColor = ( (passwordLength - min) * 100/(max-min) ) + "% 100%";
+
 }
 
 function setIndicator(color){
@@ -174,7 +179,7 @@ generateBtn.addEventListener("click", () => {
         
     }
 
-    for(let i=0 ; i<passwordLength - funcArr.length; i++){
+    for(let i=0 ; i < passwordLength; i++){
         let randIndex = getRandomInteger(0, funcArr.length);
         password += funcArr[randIndex]();
     }
